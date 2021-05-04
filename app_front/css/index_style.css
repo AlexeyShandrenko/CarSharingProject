@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.slider {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  animation: animate 32s ease-in-out infinite;
+  background-size: cover;
+  overflow: hidden;
+  }
+
+.outer {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animate {
+  0%, 100% {
+    background-image: url(../img/slider-img-1.jpg);
+  }
+  25% {
+    background-image: url(../img/slider-img-2.jpg);
+  }
+  50% {
+    background-image: url(../img/slider-img-3.jpg);
+  }
+  75% {
+    background-image: url(../img/slider-img-4.jpg);
+  }
+}
+
+.info-block {
+  padding: 5px 0;
+  background-color: #1e2228;
+}
+
+.info-block__row {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.4;
+}
+
+.info-block__address {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.info-block__time {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.info-block__links {
+  display: flex;
+  justify-content: space-around;
+  width: 120px;
+}
+
+.info-block__links-element {
+  line-height: 1.4;
+}
+
+.info-block__links-element a img {
+  width: 20px;
+  height: 20px;
+}
+
+.header {
+  padding: 10px 0;
+  background-color: rgba(246, 243, 234, 0.3);
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+
+}
+.logo__list img {
+  height: 60px;
+  width: 70px;
+}
+
+.logo__list {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.menu {}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.menu__element a {
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2.8;
+  transition: 0.7s;
+}
+
+.menu__element a:hover {
+  color: #fff;
+}
+
+.book-a-car {
+  height: 600px;
+}
+
+.display {
+  text-align: center;
+  padding: 200px 0 50px 0;
+}
+
+.title {
+  font-size: 64px;
+  color: #9d6cd9;
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin-bottom: 25px;
+}
+
+.display__description {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.display__form { 
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  padding: 50px;
+  color: #fff;
+}
+
+.about-us {
+  padding: 100px 0;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.name {}
+.name__main {}
+.line {}
+.name__description {}
+.about-us__description {}
+.about-us__description-text {}
+.about-us__description-image {}
+.about-us__brands {}
+.about-us__brands-list {}
+.about-us__brands-elements {}
+.about-us__brands-elements-container {}
+.about-us__brands-elements-container-title {}
+.about-us__brands-elements-container-description {}
+.services {}
+.services__blocks {}
+.services__blocks-list {}
+.services__blocks-elements {}
+.services__blocks-elements-container {}
+.services__blocks-elements-container-title {}
+.services__blocks-elements-container-description {}
+.achievements {}
+.achievements__list {}
+.achievements__elements {}
+.achievements__elements-number {}
+.achievements__elements-description {}
+.car-menu {}
+.footer {}
+.first-footer {}
+.second-footer {}
