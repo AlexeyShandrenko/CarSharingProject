@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 70px;
 }
 
-.logo__list {
+.logo__list a {
   font-size: 36px;
   color: #fff;
   font-weight: 300;
@@ -242,37 +242,330 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-us {
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
-  border: 1px solid black;
 }
 
-.name {}
-.name__main {}
-.line {}
-.name__description {}
-.about-us__description {}
-.about-us__description-text {}
-.about-us__description-image {}
-.about-us__brands {}
-.about-us__brands-list {}
-.about-us__brands-elements {}
-.about-us__brands-elements-container {}
-.about-us__brands-elements-container-title {}
-.about-us__brands-elements-container-description {}
-.services {}
-.services__blocks {}
-.services__blocks-list {}
-.services__blocks-elements {}
-.services__blocks-elements-container {}
-.services__blocks-elements-container-title {}
-.services__blocks-elements-container-description {}
-.achievements {}
-.achievements__list {}
-.achievements__elements {}
-.achievements__elements-number {}
-.achievements__elements-description {}
+.name {
+}
+
+.name__main {
+  font-size: 36px;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-top: 35px;
+  letter-spacing: 2.75px;
+}
+
+.line {
+  margin: 10px;
+  display: inline-block;
+}
+
+.line__i img {
+  height: 22px;
+  width: 20px;
+  margin: 0 10px;
+}
+
+.line__i:before {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background-color: #1a1a1a;
+  display: inline-block;
+  padding: 0px 10px;
+  line-height: 5px;
+}
+
+.line__i:after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background-color: #1a1a1a;
+  display: inline-block;
+  padding: 0px 10px;
+  line-height: 5px;
+}
+
+.name__description {
+  padding: 10px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.about-us__description {
+  margin: 60px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us__description-text {
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.75;
+  font-size: 18px;
+  color: #1a1a1a;
+  opacity: 75%;
+}
+
+.about-us__description-text p {
+  margin: 15px 0;
+}
+
+.about-us__description-image img{
+  flex: 1 1 auto;
+}
+
+.about-us__links {
+  text-align: left;
+}
+
+.about-us__links-list {
+  margin: -20px 0 0 0;
+}
+.about-us__links-elements {
+  display: inline-block;
+  margin: 0 30px 0 0;
+  background-color: #9d6cd9;
+  width: 100px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 1px 1px 2px #9d6cd9;
+  transition: 0.7s;
+}
+
+.about-us__links-elements:hover {
+  background-color: #8e5acd;
+  width: 120px;
+}
+
+.about-us__links-elements a {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.services {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #333333;
+}
+
+.name__main_white {
+  color: #fff;
+}
+
+.line__i_white:before {
+  content: '';
+  background-color: #fff;
+}
+
+.line__i_white:after {
+  content: '';
+  background-color: #fff;
+}
+
+.name__description_white {
+  color: #fff;
+}
+
+.services__blocks {
+  margin: 60px 0 20px 0;
+}
+
+.services__blocks-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.services__blocks-content {
+  flex: 0 1 40%;
+  margin-bottom: 70px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 2px 2px 10px #9d6cd9;
+  border-radius: 30px;
+  background-color: #9d6cd9;
+}
+
+
+
+.services__blocks-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.services__blocks-row img {
+  height: 40px;
+  width: 60px;
+  margin-top: 20px; 
+}
+
+.services__blocks-description {
+  padding: 0 0 0 15px;
+}
+
+.services__blocks-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+
+.services__blocks-content-text {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #fff;
+  opacity: 85%;
+}
+
+.achievements {
+  padding: 120px 0;
+  background: url(../img/achive-back.jpg) 0 0/ auto auto no-repeat;
+}
+
+.achievements__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.achievements__elements {
+  display: flex;
+}
+
+.achievements__elements img {
+  margin: 0 20px 0 0;
+}
+
+.achievements__text {
+  color: #fff;
+}
+
+.achievements__elements-number {
+  margin: 0 0 10px 0;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.achievements__elements-description {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .car-menu {}
+
 .footer {}
-.first-footer {}
-.second-footer {}
+
+.first-footer {
+  padding: 70px 0;
+  background-color: #333333;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__elements {}
+
+.footer__elements-title {
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer__elements-logo {
+  display: flex;
+  padding: 30px 0;
+}
+
+.footer__elements-logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.footer__elements-logo-name {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-left: 10px;
+}
+
+.footer__elements-text {
+  width: 400px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #fff;
+  opacity: 75%;
+}
+
+.footer__contacts {}
+.footer__elements-description {
+  width: 400px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #fff;
+  opacity: 75%;
+  padding: 30px 0;
+}
+
+.footer__contacts-address {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.footer__contacts-time {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  margin-top: 20px;
+}
+.footer__links-element a img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__button {
+  width: 120px;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #9d6cd9;
+  margin-top: 25px; 
+  border-radius: 30px;
+  transition: 0.7s;
+}
+
+.footer__button:hover {
+  background-color: #8e5acd;
+  width: 150px;
+}
+
+.footer__button-content {
+  color: #fff;
+  font-weight: 700;
+}
+
+.second-footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px;
+}
