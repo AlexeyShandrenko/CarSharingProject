@@ -110,17 +110,17 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes animate {
   0%, 100% {
-    background-image: url(../img/services_slider1.jpg);
-  }
-  25% {
-    background-image: url(../img/services_slider2.jpg);
+    background-image: url(../img/contact-slider1.jpg);
   }
   50% {
-    background-image: url(../img/services_slider3.jpg);
+    background-image: url(../img/contact-slider2.jpg);
+  }
+  /*50% {
+    background-image: url(../img/slider-img-3.jpg);
   }
   75% {
-    background-image: url(../img/services_slider4.jpg);
-  }
+    background-image: url(../img/slider-img-4.jpg);
+  }*/
 }
 
 .info-block {
@@ -266,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 64px;
   font-weight: 900;
   letter-spacing: 8px;
-} 
+}
 
 .line {
   margin: 10px;
@@ -377,10 +377,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #333333;
 }
 
-.services_service {
-  background-color: #fff;
-}
-
 .name__main_white {
   color: #fff;
 }
@@ -414,7 +410,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 70px;
   padding: 20px;
   text-align: left;
-  box-shadow: 0px 0px 5px #9d6cd9;
+  box-shadow: 2px 2px 10px #9d6cd9;
   border-radius: 30px;
   background-color: #9d6cd9;
 }
@@ -486,6 +482,79 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .car-menu {}
+
+.contact-form {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.contact-form form {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form form input[name = fullname],
+.contact-form form input[name = email] {
+  background: none;
+  border: 2px solid #343333;
+  text-align: center;
+  padding: 10px 0;
+  width: 350px;
+  margin: 20px 20px 35px 20px; 
+}
+
+.contact-form form input[name = fullname]:focus,
+.contact-form form input[name = email]:focus {
+  border: 2px solid #9d6cd9;
+}
+
+.contact-form form input[name = subject] {
+  margin: 30px 0;
+  background: none;
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #343333;
+  padding: 10px 0;
+}
+
+.contact-form form input[name = subject]:focus {
+  border: 2px solid #9d6cd9;
+}
+
+textarea {
+  border: 2px solid #343333;
+  margin: 35px 0;
+  background: none;
+  resize: none;
+  padding: 15px;
+  width: 750px;
+  height: 250px;
+}
+
+textarea:focus {
+  border: 2px solid #9d6cd9;
+}
+
+.contact-form form input[type = submit] {
+  border: 0;
+  background-color: #9d6cd9;
+  display: block;
+  text-align: center;
+  box-shadow: 1px 1px 4px #9d6cd9;
+  padding: 10px 40px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.contact-form form input[type = submit]:hover {
+  background-color: #7f48c3;
+}
 
 .footer {}
 
@@ -592,7 +661,7 @@ h1, h2, h3, h4, h5, h6 {
 .second-footer {
   background-color: #1a1a1a;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   padding: 15px;
 }
