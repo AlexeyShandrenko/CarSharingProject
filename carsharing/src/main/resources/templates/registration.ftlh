@@ -24,8 +24,8 @@
     <div class="slider">
         <div class="outer">
             <div class="registration">
-                <form class="registration__box" action="" method="">
-                    <a href="/base_page"><img src="../img/car.png" alt="" class="registration__img"></a>
+                <form class="registration__box" action="/sign_up" method="post">
+                    <a href="/"><img src="../img/car.png" alt="" class="registration__img"></a>
                     <h1 class="registration__title">Registration</h1>
                     <input type="text" name="firstname" placeholder="Firstname">
                     <input type="text" name="lastname" placeholder="Lastname">

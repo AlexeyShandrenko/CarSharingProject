@@ -25,7 +25,7 @@
         <div class="outer">
             <div class="registration">
                 <form class="registration__box" action="" method="">
-                    <a href="/base_page"><img src="../img/car.png" alt="" class="registration__img"></a>
+                    <a href="/"><img src="../img/car.png" alt="" class="registration__img"></a>
                     <h1 class="registration__title">Enter into Account</h1>
                     <input type="email" name="email" placeholder="Email">
                     <input type="password" name="password" placeholder="Password">

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BasePageController {
 
-    @GetMapping("/base_page")
+    @GetMapping("/")
     public String getBasePage() {
         return "base_page";
     }
