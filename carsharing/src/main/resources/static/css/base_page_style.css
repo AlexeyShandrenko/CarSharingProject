@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+
+body {
+
+}
+
+.wrapper {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.slider {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation: animate 32s ease-in-out infinite;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.outer {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animate {
+    0%, 100% {
+        background-image: url(../img/base_page-slider1.jpg);
+    }
+    25% {
+        background-image: url(../img/slider-img-1.jpg);
+    }
+    50% {
+        background-image: url(../img/about-slider2.jpeg);
+    }
+    75% {
+        background-image: url(../img/slider-img-2.jpg);
+    }
+}
+
+.menu {
+    display: flex;
+    padding: 17px;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 20px;
+
+}
+
+.logo__list a {
+    margin-bottom: 20px; 
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.menu__list {
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    justify-content: space-around;
+    transition: 0.7s;
+}
+
+.menu__element {
+}
+
+.menu__element a {
+    font-size: 16px;
+    line-height: 0.90;
+    color: #fff;
+    text-shadow: 0px 0px 0px #fff;
+    transition: 0.4s;
+}
+
+.menu__element a:hover {
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.menu_sign-up {
+    transition: 0.7s;
+    width: 250px;
+}
+
+.menu__sign-up a {
+    font-size: 16px;
+    line-height: 0.90;
+    color: #fff;
+    text-shadow: 0px 0px 0px #fff;
+    transition: 0.5s;
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 40px;
+    border: 2px solid #9d6cd9;
+}
+
+.menu__sign-up a:hover {
+    background-color: #9d6cd9;
+    color: #fff;
+}
+
+.title {
+    margin: 70px 0 0 0px;
+    text-align: left;
+    width: 400px;
+    color: #fff;
+}
+
+.title__main {
+    font-size: 22px;
+    opacity: 60%;
+    font-weight: bold;
+    line-height: 0.90;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+.title__text {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.36px;
+    margin-bottom: 60px;
+    font-weight: 500;
+
+}
+
+.button {
+    text-align: center;
+}
+
+.button__element a {
+    width: 120px;
+    padding: 15px 0;
+    border-radius: 30px;
+    transition: 0.7s;
+    background-color: #9d6cd9;
+    box-shadow: 0px 0px 3px #9d6cd9;
+    color: #fff;
+    display: block;
+}
+
+
+.button__element a:hover {
+    width: 150px;
+}
