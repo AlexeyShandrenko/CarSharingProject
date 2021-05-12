@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+<@spring.bind "userForm"/>
 <div class="wrapper">
     <div class="slider">
         <div class="outer">
@@ -27,12 +27,40 @@
                 <form class="registration__box" action="/sign_up" method="post">
                     <a href="/"><img src="../img/car.png" alt="" class="registration__img"></a>
                     <h1 class="registration__title">Registration</h1>
-                    <input type="text" name="firstname" placeholder="Firstname">
-                    <input type="text" name="lastname" placeholder="Lastname">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="password" name="password" placeholder="Password">
-                    <input type="password" name="password_repeat" placeholder="Password Repeat">
-                    <input type="number" name="age" placeholder="Age">
+<#--                    <input type="text" name="firstname" placeholder="Firstname">-->
+<#--                    <input type="text" name="lastname" placeholder="Lastname">-->
+                    <@spring.formInput "userForm.firstname" "placeholder='Firstname'"/>
+                    <@spring.showErrors "<br>" "error"/>
+
+                    <@spring.formInput "userForm.lastname" "placeholder='Lastname'"/>
+                    <@spring.showErrors "<br>" "error"/>
+
+                    <#if namesErrorMessage??>
+                        <p class="errorMessage">${namesErrorMessage}</p>
+                    </#if>
+
+<#--                    <input type="email" name="email" placeholder="Email">-->
+
+                    <@spring.formInput "userForm.email" "placeholder='Email'"/>
+                    <@spring.showErrors "<br>" "error"/>
+
+<#--                    <input type="password" name="password" placeholder="Password">-->
+<#--                    <input type="password" name="password_repeat" placeholder="Password Repeat">-->
+
+                    <@spring.formPasswordInput "userForm.password" "placeholder='Password'"/>
+                    <@spring.showErrors "<br>" "error"/>
+
+                    <@spring.formPasswordInput "userForm.password_repeat" "placeholder='Password Repeat'"/>
+                    <@spring.showErrors "<br>" "error"/>
+
+                    <#if passwordMatchErrorMessage??>
+                        <p class="passwordMatchErrorMessage">${passwordMatchErrorMessage}</p>
+                    </#if>
+
+<#--                    <input type="number" name="age" placeholder="Age">-->
+                    <@spring.formInput "userForm.age" "placeholder='Age'"/>
+                    <@spring.showErrors "<br>" "error"/>
+
                     <a href="" class=""><input type="submit" value="Sign Up"></a>
                     <div class="sign-up"> Have an Account? <a href="/login" class="sign-up__link">Sign In!</a></div>
                 </form>
