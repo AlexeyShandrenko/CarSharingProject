@@ -4,6 +4,8 @@ import freemarker.template.TemplateExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassRelativeResourceLoader;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.freemarker.SpringTemplateLoader;
 
 import java.util.concurrent.ExecutorService;
@@ -26,6 +28,11 @@ public class ApplicationConfig {
                         "/"));
         configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
         return configuration;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
 }

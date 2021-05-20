@@ -24,11 +24,13 @@
     <div class="slider">
         <div class="outer">
             <div class="registration">
-                <form class="registration__box" action="" method="">
-                    <a href="/"><img src="../img/car.png" alt="" class="registration__img"></a>
+                <form class="registration__box" action="" method="post">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                    <a href="/base_page"><img src="../img/car.png" alt="" class="registration__img"></a>
                     <h1 class="registration__title">Enter into Account</h1>
                     <input type="email" name="email" placeholder="Email">
                     <input type="password" name="password" placeholder="Password">
+                    <input type="checkbox" name="remember-me"><div class="remember-me">Remember me</div>
                     <a href="" class=""><input type="submit" value="Enter"></a>
                     <div class="sign-up"> Don't have an account? <a href="/sign_up" class="sign-up__link">Create
                             New!</a></div>

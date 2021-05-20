@@ -1,0 +1,32 @@
+GET http://localhost:70/users/json
+
+###
+
+POST http://localhost:70/users/json
+Content-Type: application/json
+
+{
+  "firstname" : "vasya",
+  "lastname" : "pupkin",
+  "email" : "vasya@gmail.com",
+  "phone" : "222",
+  "city" : "Moscow"
+}
+
+###
+
+PUT http://localhost:70/users/json/2
+Content-Type: application/json
+
+{
+  "firstname" : "vasya",
+  "lastname" : "pupkin",
+  "phone" : "222",
+  "city" : "Moscow"
+}
+
+###
+
+DELETE http://localhost:70/users/json/2
+
+###

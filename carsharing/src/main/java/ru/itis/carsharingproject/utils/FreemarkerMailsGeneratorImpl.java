@@ -38,4 +38,28 @@ public class FreemarkerMailsGeneratorImpl implements MailsGenerator {
         }
         return writer.toString();
     }
+
+    @Override
+    public String getMailForContact(String firstname, String email, String subject, String description) {
+        Template confirmMailTemplate;
+        try {
+            confirmMailTemplate = configuration.getTemplate("mails/contact_mail.ftlh");
+        } catch (IOException e) {
+            throw new IllegalArgumentException(e);
+        }
+
+        Map<String, String> attributes = new HashMap<>();
+        attributes.put("message_firstname", firstname);
+        attributes.put("message_email", email);
+        attributes.put("message_subject", subject);
+        attributes.put("message_description", description);
+
+        StringWriter writer = new StringWriter();
+        try {
+            confirmMailTemplate.process(attributes, writer);
+        } catch (TemplateException | IOException e) {
+            throw new IllegalArgumentException(e);
+        }
+        return writer.toString();
+    }
 }

@@ -48,7 +48,7 @@
                     </div>
                     <div class="button">
                         <div class="button__element">
-                            <a href="/login">Login</a>
+                            <a href="/sign_in">Login</a>
                         </div>
                     </div>
                 </div>

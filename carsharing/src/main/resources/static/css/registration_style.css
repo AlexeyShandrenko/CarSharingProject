@@ -192,6 +192,14 @@ body {
     font-weight: 800;
 }
 
+.remember-me {
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0 0 0 10px;
+}
+
 .registration__box input[type = "submit"] {
     border: 0;
     background-color: #9d6cd9;

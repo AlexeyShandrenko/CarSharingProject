@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -23,11 +24,15 @@ public class User implements Serializable {
     private String firstname;
     private String lastname;
     private String email;
-    private String password;
+    private String hashPassword;
     private Integer age;
     private String phone;
     private String city;
     private String confirm_code;
+    private Boolean isDeleted;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "photo_id", referencedColumnName = "id")
+    private UserPhoto userPhoto;
 
     @Enumerated(value = EnumType.STRING)
     private State state;
@@ -46,6 +51,9 @@ public class User implements Serializable {
     public enum Status {
         CONFIRMED, UNCONFIRMED
     }
+
+    @OneToMany(mappedBy = "owner")
+    private List<Orders> ordersList;
 
     public Boolean isActive() {
         return this.state == State.ACTIVE;

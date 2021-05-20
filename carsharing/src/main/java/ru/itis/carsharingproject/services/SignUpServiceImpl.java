@@ -3,6 +3,7 @@ package ru.itis.carsharingproject.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.itis.carsharingproject.dto.UserForm;
 import ru.itis.carsharingproject.models.User;
@@ -20,6 +21,9 @@ public class SignUpServiceImpl implements SignUpService {
 
     @Autowired
     private MailsGenerator mailsGenerator;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Value("${server.url}")
     private String serverUrl;
@@ -39,7 +43,7 @@ public class SignUpServiceImpl implements SignUpService {
                 .firstname(userForm.getFirstname())
                 .lastname(userForm.getLastname())
                 .email(userForm.getEmail())
-                .password(userForm.getPassword())
+                .hashPassword(passwordEncoder.encode(userForm.getPassword()))
                 .age(userForm.getAge())
                 .confirm_code(UUID.randomUUID().toString())
                 .status(User.Status.UNCONFIRMED)
@@ -53,4 +57,5 @@ public class SignUpServiceImpl implements SignUpService {
 
         emailUtil.sendEmail(newUser.getEmail(), subject, from, confirmMail);
     }
+
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.itis.carsharingproject.dto.UserForm;
 import ru.itis.carsharingproject.services.SignUpService;
+import ru.itis.carsharingproject.services.UsersService;
 
 import javax.validation.Valid;
 import java.util.Objects;
@@ -18,15 +19,23 @@ public class SignUpController {
     @Autowired
     private SignUpService signUpService;
 
+    @Autowired
+    private UsersService usersService;
+
     @GetMapping("/sign_up")
     public String getSignUpPage(Model model) {
         model.addAttribute("userForm", new UserForm());
         return "registration";
     }
 
-    @GetMapping("confirm")
+    @GetMapping("/confirm")
     public String getConfirmPage() {
         return "confirm_page";
+    }
+
+    @GetMapping("/activate")
+    public String activateAccount() {
+        return "redirect:/sign_in";
     }
 
     @PostMapping("/sign_up")
@@ -46,7 +55,7 @@ public class SignUpController {
             return "registration";
         }
         signUpService.signUp(userForm);
-        return "redirect:/login";
+        return "redirect:/confirm";
 
     }
 

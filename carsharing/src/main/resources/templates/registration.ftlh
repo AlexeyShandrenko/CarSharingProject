@@ -25,7 +25,8 @@
         <div class="outer">
             <div class="registration">
                 <form class="registration__box" action="/sign_up" method="post">
-                    <a href="/"><img src="../img/car.png" alt="" class="registration__img"></a>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                    <a href="/base_page"><img src="../img/car.png" alt="" class="registration__img"></a>
                     <h1 class="registration__title">Registration</h1>
 <#--                    <input type="text" name="firstname" placeholder="Firstname">-->
 <#--                    <input type="text" name="lastname" placeholder="Lastname">-->
@@ -62,7 +63,7 @@
                     <@spring.showErrors "<br>" "error"/>
 
                     <a href="" class=""><input type="submit" value="Sign Up"></a>
-                    <div class="sign-up"> Have an Account? <a href="/login" class="sign-up__link">Sign In!</a></div>
+                    <div class="sign-up"> Have an Account? <a href="/sign_in" class="sign-up__link">Sign In!</a></div>
                 </form>
             </div>
         </div>
