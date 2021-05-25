@@ -34,7 +34,7 @@
                     <a href="" class=""><input type="submit" value="Enter"></a>
                     <div class="sign-up"> Don't have an account? <a href="/sign_up" class="sign-up__link">Create
                             New!</a></div>
-                    <div class="sign-up">Enter like <a href="#" class="sign-up__link">Anonymous!</a></div>
+                    <div class="sign-up">Enter like <a href="/main_page" class="sign-up__link">Anonymous!</a></div>
                 </form>
             </div>
         </div>

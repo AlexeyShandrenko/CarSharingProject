@@ -69,7 +69,7 @@
                                             <li class="pages-list__element"><a href="/logout">LOGOUT</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu__element"><a href="/contacts">CONTACT</a></li>
+                                    <li class="menu__element"><a href="/contacts">CHAT</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                 <div class="profile__row">
 
                     <div class="profile__avatar">
-                        <img src="${user.userPhoto.url}" alt="">
+                        <img src="http://cdn.onlinewebfonts.com/svg/download_332758.png" alt="">
                         <div class="profile__avatar-change">
                             <a href="/edit_image">Change Avatar</a>
                         </div>
@@ -139,6 +139,7 @@
                         </tr>
 
                         <#else>
+                            Fill the phone
                             <tr>
                                 <td>Phone:</td>
                                 <td><form action="/profile&phone" method="post">
@@ -159,6 +160,7 @@
                         </tr>
 
                         <#else>
+                            Fill the city
                         <tr>
                             <td>City:</td>
                             <td><form action="/profile&city" method="post">

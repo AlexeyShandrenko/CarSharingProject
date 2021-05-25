@@ -71,7 +71,7 @@
                                             <li class="pages-list__element"><a href="/logout">LOGOUT</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu__element"><a href="/contacts">CONTACT</a></li>
+                                    <li class="menu__element"><a href="/contacts">CHAT</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
 							<i class="line__i line__i_about-us"><img src="../img/title-line-car.png" alt=""></i>
 						</span>
                                 <div class="name__description name__description_about-us">
-                                    <p>To finish booking, please select a car!</p>
+                                    <p>To book a car you need to select your car!</p>
                                 </div>
                             </div>
                         </div>
@@ -99,6 +99,7 @@
 
                 <div class="car-menu">
                     <div class="container">
+
                         <ul class="car-menu__list">
 
                             <#if vehicles??>
@@ -112,14 +113,15 @@
                                             <div class="car-menu__price">${vehicle.price}$ RENT/PER DAY</div>
                                             <div class="car-menu__description">${vehicle.description}</div>
                                             <ul class="car-menu__characteristics">
-                                                <li>${vehicle.acceleration_time}</li>
-                                                <li>${vehicle.max_speed}</li>
-                                                <li>${vehicle.bodyType.name}</li>
+                                                <li>Acceleration time: ${vehicle.acceleration_time}</li>
+                                                <li>Max speed: ${vehicle.max_speed}</li>
+                                                <li>Body type: ${vehicle.bodyType.name}</li>
                                             </ul>
                                             <div class="car-menu__button">
                                                 <a href="/add_car/${vehicle.id}">Book It</a>
                                             </div>
                                         </div>
+
                                     </li>
 
                                 </#list>
@@ -128,7 +130,9 @@
 
                         </ul>
                     </div>
+
                 </div>
+    </div>
 
 
     </div>

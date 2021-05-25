@@ -12,12 +12,20 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
-public class VehiclePhoto {
+public class History {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String url;
-    @OneToOne(mappedBy = "vehiclePhoto")
+    private Long history_id;
+    private String location;
+    private String city;
+    private Integer price;
+    private String pick_date;
+    private String return_date;
+    @ManyToOne()
+    @JoinColumn(name = "user_id")
+    private User owner;
+    @ManyToOne()
+    @JoinColumn(name = "vehicle_id")
     private Vehicle vehicle;
 }

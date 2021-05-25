@@ -69,7 +69,7 @@
                                             <li class="pages-list__element"><a href="/logout">LOGOUT</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu__element"><a href="/contacts">CONTACT</a></li>
+                                    <li class="menu__element"><a href="/contacts">CHAT</a></li>
                                 </ul>
                             </div>
                         </div>

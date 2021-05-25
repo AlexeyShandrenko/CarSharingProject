@@ -7,6 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.itis.carsharingproject.dto.UserForm;
 import ru.itis.carsharingproject.models.User;
+import ru.itis.carsharingproject.models.UserPhoto;
 import ru.itis.carsharingproject.repositories.UsersRepository;
 import ru.itis.carsharingproject.utils.EmailUtil;
 import ru.itis.carsharingproject.utils.MailsGenerator;
@@ -49,6 +50,7 @@ public class SignUpServiceImpl implements SignUpService {
                 .status(User.Status.UNCONFIRMED)
                 .role(User.Role.USER)
                 .state(User.State.ACTIVE)
+                .city(userForm.getCity())
                 .build();
 
         usersRepository.save(newUser);

@@ -137,3 +137,22 @@ body {
     font-size: 18px;
     font-weight: 700;
 }
+
+.success {
+    margin: 15px auto;
+    width: 150px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #9d6cd9;
+    transition: 0.7s;
+}
+
+.success__button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.success:hover {
+    width: 180px;
+}

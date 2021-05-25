@@ -5,9 +5,9 @@
 
 <head>
 
-    <title>Services Page</title>
+    <title>Cars Page</title>
 
-    <link rel="stylesheet" type="text/css" href="../css/services_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/add_form.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -60,14 +60,13 @@
                                 <ul class="menu__list">
                                     <li class="menu__element"><a href="/main_page">HOME</a></li>
                                     <li class="menu__element"><a href="/about_page">ABOUT US</a></li>
-                                    <li class="menu__element menu__element_active"><a href="">SERVICES</a>
-                                    </li>
-                                    <li class="menu__element"><a href="/car_page">CARS</a></li>
+                                    <li class="menu__element"><a href="/services">SERVICES</a></li>
+                                    <li class="menu__element menu__element_active"><a href="#">CARS</a></li>
                                     <li class="menu__element menu__element_pages"><a href="">PAGES</a>
                                         <ul class="pages-list">
                                             <li class="pages-list__element"><a href="/profile">PROFILE</a></li>
                                             <li class="pages-list__element"><a href="/orders">MY ORDERS</a></li>
-                                            <li class="pages-list__element"><a href="#">FAQ</a></li>
+                                            <li class="pages-list__element"><a href="/faq">FAQ</a></li>
                                             <li class="pages-list__element"><a href="/history">HISTORY</a></li>
                                             <li class="pages-list__element"><a href="/logout">LOGOUT</a></li>
                                         </ul>
@@ -83,12 +82,12 @@
                     <div class="container">
                         <div class="display">
                             <div class="name">
-                                <div class="name__main name__main_about-us">OUR SERVICES</div>
+                                <div class="name__main name__main_about-us">STEP 2: FILL THE FORM!</div>
                                 <span class="line">
 							<i class="line__i line__i_about-us"><img src="../img/title-line-car.png" alt=""></i>
 						</span>
                                 <div class="name__description name__description_about-us">
-                                    <p>Services provided by us!</p>
+                                    <p>To book a car you need to fill the form!</p>
                                 </div>
                             </div>
                         </div>
@@ -98,89 +97,22 @@
             </div>
         </div>
 
-        <div class="services services_service">
+        <div class="car-menu">
             <div class="container">
-                <div class="name">
-                    <div class="name__main">OUR SERVICES</div>
-                    <span class="line">
-							<i class="line__i"><img src="../img/title-line-car.png" alt=""></i>
-						</span>
-                    <div class="name__description">
-                        <p>Services provided by us</p>
-                    </div>
-                </div>
+                <div class="display__form">
+                    <form action="/car_page_form" method="post">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                        <input type="text" name="location" placeholder="Enter your Location">
+                        <input type="text" name="pick_date" placeholder="Pick Date">
+                        <input type="text" name="return_date" placeholder="Return Date">
 
-                <div class="services__blocks">
-                    <ul class="services__blocks-list">
-                        <li class="services__blocks-content services__blocks-content_active">
-                            <div class="services__blocks-row">
-                                <img src="../img/rental-car.png" alt="">
-                                <div class="services__blocks-description">
-                                    <div class="services__blocks-title">RENTAL CAR</div>
-                                    <div class="services__blocks-content-text">Rent a car at any time convenient for
-                                        you!
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="services__blocks-content">
-                            <div class="services__blocks-row">
-                                <img src="../img/car-repair.png" alt="">
-                                <div class="services__blocks-description">
-                                    <div class="services__blocks-title">CAR REPAIR</div>
-                                    <div class="services__blocks-content-text">Has a problem with car? We'll take care
-                                        of it!
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="services__blocks-content">
-                            <div class="services__blocks-row">
-                                <img src="../img/taxi-driver.png" alt="">
-                                <div class="services__blocks-description">
-                                    <div class="services__blocks-title">TAXI SERVICE</div>
-                                    <div class="services__blocks-content-text">No need a car? Just order taxi!</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="services__blocks-content">
-                            <div class="services__blocks-row">
-                                <img src="../img/life-insurance.png" alt="">
-                                <div class="services__blocks-description">
-                                    <div class="services__blocks-title">LIFE INSURANCE</div>
-                                    <div class="services__blocks-content-text">All cars are insured in the course of an
-                                        unfortunate accident!
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="services__blocks-content">
-                            <div class="services__blocks-row">
-                                <img src="../img/car-wash.png" alt="">
-                                <div class="services__blocks-description">
-                                    <div class="services__blocks-title">CAR WASH</div>
-                                    <div class="services__blocks-content-text">Oh, your car is so dirty... Doesn't
-                                        matter, just come to our center!
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="services__blocks-content">
-                            <div class="services__blocks-row">
-                                <img src="../img/order.png" alt="">
-                                <div class="services__blocks-description">
-                                    <div class="services__blocks-title">CALL DRIVER</div>
-                                    <div class="services__blocks-content-text">No opportunities to drive a car? Just
-                                        book a car with private driver!
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                        <input type="submit" value="confirm">
+                    </form>
                 </div>
 
             </div>
         </div>
+
 
     </div>
 

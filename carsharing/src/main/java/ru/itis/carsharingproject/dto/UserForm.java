@@ -12,11 +12,11 @@ import ru.itis.carsharingproject.validation.ValidPassword;
 import javax.validation.constraints.Email;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @ValidNames(message = "{errors.invalid.names}", name = "firstname", surname = "lastname")
-@ValidMatchPassword(message = "{errors.incorrect.unmatched_password}", password = "password", password_repeat = "password_repeat")
+@ValidMatchPassword(message = "{errors.incorrect.passwords}", password = "password", password_repeat = "password_repeat")
 public class UserForm {
 
     private String firstname;
@@ -28,5 +28,6 @@ public class UserForm {
     private String password_repeat;
     @ValidAge(message = "{errors.invalid.age}")
     private Integer age;
+    private String city;
 
 }

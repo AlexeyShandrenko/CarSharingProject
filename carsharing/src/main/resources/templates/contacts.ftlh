@@ -19,9 +19,42 @@
 
     <meta http-equiv="Content-type" content="text/html" charset="utf-8">
 
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        let webSocket;
+
+
+
+        function connect() {
+            webSocket = new WebSocket('ws://localhost:70/chat');
+
+            document.cookie = 'AUTH=' + '12345' + ';path=/';
+
+            webSocket.onmessage = function receiveMessage(response) {
+                let json = JSON.parse(response['data']);
+                $('#messagesList').first().after("<li>" + json['from'] + ' ' + json['text'] + "</li>")
+            }
+        }
+
+        function sendMessage(text, name) {
+            let message = {
+                "text" : text,
+                "from": name
+            };
+
+            webSocket.send(JSON.stringify(message));
+        }
+    </script>
+
+
+
 </head>
 
-<body>
+<body onload="connect()">
 
 <div class="wrapper">
 
@@ -71,7 +104,7 @@
                                             <li class="pages-list__element"><a href="/logout">LOGOUT</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu__element menu__element_active"><a href="/contacts">CONTACT</a></li>
+                                    <li class="menu__element menu__element_active"><a href="/contacts">CHAT</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -82,12 +115,12 @@
                     <div class="container">
                         <div class="display">
                             <div class="name">
-                                <div class="name__main name__main_about-us">CONTACT US</div>
+                                <div class="name__main name__main_about-us">CHAT</div>
                                 <span class="line">
 							<i class="line__i line__i_about-us"><img src="../img/title-line-car.png" alt=""></i>
 						</span>
                                 <div class="name__description name__description_about-us">
-                                    <p>Our mission is to provide attractive sharing cars for you!</p>
+                                    <p>Communicate with each other right here!</p>
                                 </div>
                             </div>
                         </div>
@@ -98,14 +131,16 @@
         </div>
 
         <div class="contact-form">
-            <form action="/contacts" method="post">
-<#--                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">-->
-                <input type="text" class="contact-form__name" name="firstname" placeholder="Full Name">
-                <input type="email" class="contact-form__email" name="email" placeholder="Email">
-                <input type="text" class="contact-form__subject" name="subject" placeholder="Subject">
-                <textarea class="contact-form__message" name="description" placeholder="Type something..."></textarea>
-                <input type="submit" name="submit-button" value="Send">
-            </form>
+            <div>
+                <label for="message">Текст сообщения</label>
+                <input name="message" id="message" placeholder="Сообщение">
+                <button onclick="sendMessage($('#message').val(), '${name}:')">Отправить</button>
+                <h3>Сообщения</h3>
+                <ul id="messagesList">
+
+                </ul>
+            </div>
+
         </div>
 
     </div>

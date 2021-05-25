@@ -35,6 +35,13 @@ public class UsersServiceImpl implements UsersService {
     private String from;
 
     @Override
+    public void editUserStatus(User user) {
+        User activateUser = usersRepository.findById(user.getId()).orElseThrow(IllegalAccessError::new);
+        activateUser.setStatus(User.Status.CONFIRMED);
+        usersRepository.save(activateUser);
+    }
+
+    @Override
     public Optional<User> findUserByEmail(String email) {
         return usersRepository.findByEmail(email);
     }

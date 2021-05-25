@@ -62,6 +62,8 @@
                     <@spring.formInput "userForm.age" "placeholder='Age'"/>
                     <@spring.showErrors "<br>" "error"/>
 
+                    <input type="text" name="city" placeholder="Your City">
+
                     <a href="" class=""><input type="submit" value="Sign Up"></a>
                     <div class="sign-up"> Have an Account? <a href="/sign_in" class="sign-up__link">Sign In!</a></div>
                 </form>

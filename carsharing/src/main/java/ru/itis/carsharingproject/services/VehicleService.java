@@ -10,6 +10,7 @@ public interface VehicleService {
 
     List<Vehicle> findAll();
 
-    Optional<Vehicle> findVehicleById(Long id);
+    Optional<Vehicle> findById(Long id);
+
 
 }

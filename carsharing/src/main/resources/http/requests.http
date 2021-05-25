@@ -1,4 +1,4 @@
-GET http://localhost:70/users/json
+ GET http://localhost:70/users/json
 
 ###
 

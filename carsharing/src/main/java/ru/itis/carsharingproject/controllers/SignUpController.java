@@ -1,12 +1,15 @@
 package ru.itis.carsharingproject.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.itis.carsharingproject.dto.UserForm;
+import ru.itis.carsharingproject.models.User;
+import ru.itis.carsharingproject.security.details.UserDetailsImpl;
 import ru.itis.carsharingproject.services.SignUpService;
 import ru.itis.carsharingproject.services.UsersService;
 
@@ -35,6 +38,8 @@ public class SignUpController {
 
     @GetMapping("/activate")
     public String activateAccount() {
+//        User user = usersService.findUserById(userDetails.getUser().getId()).orElseThrow(IllegalAccessError::new);
+//        usersService.editUserStatus(user);
         return "redirect:/sign_in";
     }
 

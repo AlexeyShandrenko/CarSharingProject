@@ -71,7 +71,7 @@
                                             <li class="pages-list__element"><a href="/logout">LOGOUT</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu__element"><a href="/contacts">CONTACT</a></li>
+                                    <li class="menu__element"><a href="/contacts">CHAT</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="about-us__links">
                     <ul class="about-us__links-list">
-                        <li class="about-us__links-elements"><a href="#">Book a Car</a></li>
+                        <li class="about-us__links-elements"><a href="/car_page">Book a Car</a></li>
                         <li class="about-us__links-elements"><a href="/contacts">Contact Us</a></li>
                     </ul>
                 </div>

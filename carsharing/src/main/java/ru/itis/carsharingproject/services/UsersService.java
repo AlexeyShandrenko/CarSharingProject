@@ -9,6 +9,8 @@ import java.util.Optional;
 
 public interface UsersService {
 
+    void editUserStatus(User user);
+
     Optional<User> findUserByEmail(String email);
 
     Optional<User> findUserById(Long id);

@@ -20,7 +20,10 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Override
-    public Optional<Vehicle> findVehicleById(Long id) {
+    public Optional<Vehicle> findById(Long id) {
         return vehicleRepository.findById(id);
     }
+
+
+
 }

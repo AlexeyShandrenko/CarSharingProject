@@ -7,7 +7,7 @@
 
     <title>About Page</title>
 
-    <link rel="stylesheet" type="text/css" href="../css/about_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/index_style.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -71,7 +71,7 @@
                                             <li class="pages-list__element"><a href="/logout">LOGOUT</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu__element"><a href="/contacts">CONTACT</a></li>
+                                    <li class="menu__element"><a href="/contacts">CHAT</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -97,47 +97,48 @@
             </div>
         </div>
 
-            <div class="orders">
-                <div class="container">
-                    <div class="car-menu__column">
-                        <ul class="car-menu__list">
+        <div class="orders">
+            <div class="container">
+                <div class="car-menu__column">
+                    <ul class="car-menu__list">
 
-                            <#if orders??>
+                        <#if orders??>
 
-                                <#list orders as order>
+                                <li class="car-menu__elements">
+                                    <a href="/car_description"><img src="${orders.get().vehicle.vehiclePhoto.url}"
+                                                                    alt=""></a>
+                                    <div class="car-menu__elements-description">
+                                        <div class="car-menu__name">${orders.get().getVehicle().name}</div>
+                                        <div class="car-menu__price">${orders.get().vehicle.price}$ RENT/PER DAY</div>
+                                        <ul class="car-menu__characteristics">
 
-                                    <li class="car-menu__elements">
-                                        <a href="/car_description"><img src="${order.vehicle.vehiclePhoto.url}" alt=""></a>
-                                        <div class="car-menu__elements-description">
-                                            <div class="car-menu__name">${order.vehicle.name}</div>
-                                            <div class="car-menu__price">${order.vehicle.price}$ RENT/PER DAY</div>
-                                            <ul class="car-menu__characteristics">
-                                                <li>${order.city}</li>
-                                                <li>${order.location}</li>
-                                                <li>${order.pick_date}</li>
-                                                <li>${order.return_date}</li>
-                                            </ul>
-                                            <div class="car-menu__button">
-                                                <a href="#">Confirm</a>
+                                            <li>${orders.get().city}</li>
+                                                <li>${orders.get().location}</li>
+                                                <li>${orders.get().pick_date}</li>
+                                                <li>${orders.get().return_date}</li>
+
+                                        </ul>
+                                        <div class="car-menu__button">
+                                            <a href="/order_confirm/${orders.get().vehicle.id}">Confirm</a>
+                                            <div class="trash">
+                                                <a class="trash__button" href="/order_delete/${orders.get().order_id}">Delete</a>
                                             </div>
                                         </div>
-                                    </li>
-
-                                </#list>
-
-                                <#else>
-                                    <div class="empty">
-                                        There's no order here :(
                                     </div>
+                                </li>
 
-                            </#if>
+                        <#else>
 
-                        </ul>
-                    </div>
+                            <div class="empty">
+                                There's no order here :(
+                            </div>
+
+                        </#if>
+
+                    </ul>
                 </div>
             </div>
-
-
+        </div>
 
 
     </div>

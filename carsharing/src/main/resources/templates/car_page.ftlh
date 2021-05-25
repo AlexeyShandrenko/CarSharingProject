@@ -71,7 +71,7 @@
                                             <li class="pages-list__element"><a href="/logout">LOGOUT</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu__element"><a href="/contacts">CONTACT</a></li>
+                                    <li class="menu__element"><a href="/contacts">CHAT</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -140,6 +140,8 @@
 
                         <#list vehicles as vehicle>
 
+                        <#if authentication??>
+
                         <li class="car-menu__elements">
                             <a href="/car_description"><img src="${vehicle.vehiclePhoto.url}" alt=""></a>
                             <div class="car-menu__elements-description">
@@ -152,10 +154,30 @@
                                     <li>${vehicle.bodyType.name}</li>
                                 </ul>
                                 <div class="car-menu__button">
-                                    <a href="">Book It</a>
+                                    <a href="/car_page/${vehicle.id}">Book It</a>
                                 </div>
                             </div>
                         </li>
+
+                            <#else>
+                                <li class="car-menu__elements">
+                                    <a href="/car_description"><img src="${vehicle.vehiclePhoto.url}" alt=""></a>
+                                    <div class="car-menu__elements-description">
+                                        <div class="car-menu__name">${vehicle.name}</div>
+                                        <div class="car-menu__price">${vehicle.price}$ RENT/PER DAY</div>
+                                        <div class="car-menu__description">${vehicle.description}</div>
+                                        <ul class="car-menu__characteristics">
+                                            <li>${vehicle.acceleration_time}</li>
+                                            <li>${vehicle.max_speed}</li>
+                                            <li>${vehicle.bodyType.name}</li>
+                                        </ul>
+                                        <div class="car-menu__button">
+                                            <a href="/logout">Book It</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                        </#if>
 
                         </#list>
 

@@ -131,7 +131,7 @@
 <body>
 <div class="wrapper">
     <div class="content">
-        <div class="email-from">From: ${message_email}</div>
+        <div class="email-from">From: ${user}</div>
         <div class="message">
             <div class="message__firstname">${message_firstname}</div>
             <div class="message__subject">${message_subject}</div>

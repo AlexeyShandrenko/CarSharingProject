@@ -272,12 +272,40 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 60px;
 }
 
+.display__button {
+    border-radius: 25px;
+    padding: 15px 0;
+    background-color: #9d6cd9;
+    width: 200px;
+    margin: 0 auto;
+    transition: 0.7s;
+}
+
+.display__button a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.display__button:hover {
+    background-color: #7f48c3;
+    width: 230px;
+}
+
 .display__form {
     max-width: 1000px;
     margin: 0 auto;
     background: none;
-    padding: 50px;
-    color: #fff;
+    padding: 50px 0;
+    color: #1a1a1a;
+}
+
+.first-step {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333333;
 }
 
 form input[type = date] {
@@ -285,7 +313,7 @@ form input[type = date] {
     background: none;
     border: #9d6cd9 2px solid;
     transition: 0.7s;
-    color: #fff;
+    color: #1a1a1a;
     margin: 0 auto;
     text-align: center;
     padding: 14px 10px;
@@ -296,7 +324,7 @@ form input[type = text] {
     background: none;
     border: #9d6cd9 2px solid;
     transition: 0.7s;
-    color: #fff;
+    color: #1a1a1a;
     margin: 0 auto;
     text-align: center;
     padding: 16px 10px;
@@ -309,7 +337,7 @@ input[type = date]:focus {
 
 form input[type = submit] {
     width: 100px;
-    margin: 0 auto;
+    margin: 20px auto;
     color: #fff;
     padding: 14px 10px;
     background-color: #9d6cd9;
@@ -657,6 +685,7 @@ form input[type = submit]:hover {
 }
 
 .car-menu__list {
+    margin: 80px 0;
 }
 
 .car-menu__elements {
@@ -664,9 +693,10 @@ form input[type = submit]:hover {
     background-color: rgba(246, 243, 234, 0.3);
     border: 2px solid #9d6cd9;
     box-shadow: 0 0 5px #9d6cd9;
-    margin: 50px auto;
+    margin: 10px auto;
     display: flex;
     text-align: center;
+    position: relative;
 }
 
 .car-menu__elements a img {
@@ -676,12 +706,40 @@ form input[type = submit]:hover {
 
 .car-menu__elements-description {
     text-align: center;
+    padding: 10px;
+    color: #1a1a1a;
+    align-items: center;
+    margin: 80px 0 0 0px;
 }
 
-.car-menu__name {}
-.car-menu__price {}
-.car-menu__description {}
-.car-menu__characteristics {}
+.car-menu__name {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 800;
+
+}
+.car-menu__price {
+    margin: 0 0 10px 0;
+    color: #757575;
+    font-size: 12px;
+    font-weight: 500;
+}
+.car-menu__description {
+    color: #757575;
+    font-size: 12px;
+    font-weight: 500;
+}
+.car-menu__characteristics {
+    margin: 0 0 10px 0;
+    color: #757575;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.car-menu__characteristics li {
+    margin: 0 0 10px 0;
+}
+
 .car-menu__button {}
 
 .empty {
@@ -689,7 +747,23 @@ form input[type = submit]:hover {
     color: #757575;
     font-size: 22px;
     font-weight: 600;
+    text-align: center;
 }
+
+.trash {
+    padding: 10px 0 ;
+    border-radius: 25px;
+    background-color: #9d6cd9;
+    width: 150px;
+    margin: 10px auto;
+}
+
+.trash__button {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
 
 .footer {
 }
